@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.demo.dao.PostDao">
+	<resultMap type="MainPost" id="PostResult">
+		<result property="id" column="id"/>
+		<result property="post_author" column="post_author"/>
+		<result property="post_date" column="post_date"/>
+		<result property="post_title" column="post_title"/>
+		<result property="post_status" column="post_status"/>
+		<result property="comment_status" column="comment_status"/>
+	</resultMap>
+	
+	<select id="getAll"  resultMap="PostResult">
+		select * from wp_posts 
+	</select>
+
+</mapper> 
