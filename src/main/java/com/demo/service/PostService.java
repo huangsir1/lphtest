@@ -2,21 +2,22 @@ package com.demo.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.demo.dao.PostDao;
 import com.demo.model.MainPost;
 
-@Service
-public class PostService {
 
-	@Autowired
-	PostDao postDao;
+public interface PostService {
+
+	List<MainPost> getAll();
+
+	void deleteById(int id);
+
+	void updateById(MainPost post);
+
+	MainPost getById(int id);
+
+	void add(MainPost post);
+
 	
-	public List<MainPost> getAll(){
-		
-		return postDao.getAll();
-		
-	}
 }

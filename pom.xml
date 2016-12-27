@@ -70,18 +70,30 @@
            <groupId>org.springframework</groupId>
            <artifactId>spring-jdbc</artifactId>
            <version>4.0.5.RELEASE</version>
-       </dependency>
-       <dependency>
+     </dependency>
+     <dependency>
            <groupId>org.springframework</groupId>
            <artifactId>spring-tx</artifactId>
            <version>4.0.5.RELEASE</version>
-       </dependency>
-       <dependency>         
-<groupId>org.springframework</groupId>        
- <artifactId>spring-context-support</artifactId>         
-<version>3.2.3.RELEASE</version>     
-</dependency>
-       			
+     </dependency>
+     <dependency>         
+		<groupId>org.springframework</groupId>        
+		<artifactId>spring-context-support</artifactId>         
+		<version>3.2.3.RELEASE</version>     
+	</dependency>
+	<!-- aspectjweaver.jar这是Spring AOP所要用到的包 -->   
+	<dependency>    
+		<groupId>org.aspectj</groupId>    
+		<artifactId>aspectjweaver</artifactId>    
+		<version>1.7.1</version>   
+	</dependency>
+	
+    <!-- 阿里巴巴数据源包 -->
+	<dependency>
+		<groupId>com.alibaba</groupId>
+		<artifactId>druid</artifactId>
+		<version>1.0.2</version>
+	</dependency>   			
 </dependencies>
 
   <build>

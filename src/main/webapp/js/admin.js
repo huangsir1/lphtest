@@ -76,7 +76,7 @@
 			
 	};
 	$('#tab').datagrid({
-		width:400,
+		width:1000,
 		title:'用户列表',
 		iconCls:'icon-search',
 		url:getRootPath()+'/getAllPost',
@@ -153,6 +153,39 @@
 			{
 				field:'post_date',
 				title:'发帖日期',
+				width:100,
+				editor:{
+					type:'validatebox',
+					options:{
+						required:true,
+					},
+				},
+			},
+			{
+				field:'post_title',
+				title:'名称',
+				width:100,
+				editor:{
+					type:'validatebox',
+					options:{
+						required:true,
+					},
+				},
+			},
+			{
+				field:'post_status',
+				title:'状态',
+				width:100,
+				editor:{
+					type:'validatebox',
+					options:{
+						required:true,
+					},
+				},
+			},
+			{
+				field:'comment_status',
+				title:'评论状态',
 				width:100,
 				editor:{
 					type:'validatebox',

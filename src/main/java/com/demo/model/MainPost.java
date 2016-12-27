@@ -2,9 +2,12 @@ package com.demo.model;
 
 import java.util.Date;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 public class MainPost {
 	private int id;
 	private int post_author;
+
 	private Date post_date;
 	private String post_title;
 	private String post_status;

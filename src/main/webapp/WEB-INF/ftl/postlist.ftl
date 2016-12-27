@@ -1,8 +1,29 @@
+<!DOCTYPE html>
 <html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
 <body>
-    <h1> ${name!""}</h1><br/>
-    <#list postList as post>
-       <span> ${post_index+1} === ${post.id}--- ${post.post_author}---${post.post_date?string("yyyy-MM-dd")}--- ${post.post_status}--- ${post.comment_status}--- ${post.post_title}</span><br/>
-    </#list>
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>作者序号</th>
+			<th>发帖日期</th>
+			<th>帖名</th>
+			<th>状态</th>
+			<th>评论</th>
+		</tr>
+		<#list postList as post>
+		<tr>
+			<td>${post.id!''}</td>
+			<td>${post.post_author!''}</td>
+			<td>${post.post_date?string("yyyy-MM-dd HH:mm:ss")}</td>
+			<td>${post.post_title}</td>
+			<td>${post.post_status}</td>
+			<td>${post.comment_status}</td>
+		</tr>
+		</#list>
+	</table>
 </body>
 </html>
