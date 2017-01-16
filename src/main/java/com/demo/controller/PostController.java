@@ -20,7 +20,7 @@ public class PostController {
 	
 	@RequestMapping("getAllPost")
 	@ResponseBody
-	public  List<MainPost> getAllPost(){
+	public  List<MainPo> getAllPost(){
 		
 		System.out.println(postService.getAll().get(0).toString());
 		return postService.getAll();
